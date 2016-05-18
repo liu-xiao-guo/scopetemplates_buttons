@@ -43,16 +43,16 @@ void Preview::run(sc::PreviewReplyProxy const& reply) {
     layout3col.add_column({});
     layout3col.add_column({});
 
-//    QString urlString(result["uri"].get_string().c_str());
+    QString urlString(result["uri"].get_string().c_str());
 
     // Create an Open button and provide the URI to open for this preview result
     PreviewWidget w_actions("actionsId", "actions");
     VariantBuilder builder1;
-//    builder1.add_tuple({
-//            {"id", Variant("open")},
-//            {"label", Variant("Open")},
-//            {"uri", Variant(urlString.toStdString())} // uri set, this action will be handled by the Dash
-//        });
+    builder1.add_tuple({
+            {"id", Variant("open")},
+            {"label", Variant("Open")},
+            {"uri", Variant(urlString.toStdString())} // uri set, this action will be handled by the Dash
+        });
 
     sc::CannedQuery new_query(SCOPE_INSTALL_NAME);
     // new_query.set_user_data(Variant("userid=" + video.owner_id));

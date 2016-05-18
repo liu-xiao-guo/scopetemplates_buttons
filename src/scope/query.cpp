@@ -17,7 +17,7 @@
 
 #include <QDebug>
 
-const QString URI = "https://github.com/liu-xiao-guo/scopetemplates_release/blob/master/src/scope/query.cpp";
+const QString URI = "https://github.com/liu-xiao-guo/scopetemplates_buttons/blob/master/src/scope/query.cpp";
 #define qstr(s) QString::fromStdString(s)
 
 namespace sc = unity::scopes;
