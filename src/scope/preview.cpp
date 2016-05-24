@@ -50,7 +50,7 @@ void Preview::run(sc::PreviewReplyProxy const& reply) {
     VariantBuilder builder1;
     builder1.add_tuple({
             {"id", Variant("open")},
-            {"label", Variant("Open")},
+            {"label", Variant("Open the source code")},
             {"uri", Variant(urlString.toStdString())} // uri set, this action will be handled by the Dash
         });
 
