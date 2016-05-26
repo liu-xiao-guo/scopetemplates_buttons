@@ -89,6 +89,37 @@ const static string CAT_RENDERER101
     )"
 };
 
+const static string CAT_RENDERER102
+{
+    R"(
+    {
+        "schema_version" : 1,
+        "template" :
+        {
+            "category-layout" : "grid",
+            "card-layout": "vertical",
+            "card-size" : "large",
+            "card-background": "#00FF00",
+            "overlay": true,
+            "non-interactive":"true"
+        },
+        "components" :
+        {
+            "title" : "title",
+            "art" : "art",
+            "subtitle": "subtitle",
+            "mascot": "mascot",
+            "emblem": "emblem",
+            "summary": "summary",
+            "overlay-color": "overlay-color",
+            "attributes": {
+                "field": "attributes",
+                "max-count": 2
+            }
+        }
+    }
+    )"
+};
 
 const static string CAT_RENDERER2
 {
@@ -527,6 +558,7 @@ void Query::run(sc::SearchReplyProxy const& reply) {
             // The default is vertical
             pushResult(reply, CAT_RENDERER1, 1);
             pushResult(reply, CAT_RENDERER101, 101);
+            pushResult(reply, CAT_RENDERER102, 102);
             pushResult(reply, CAT_RENDERER2, 2);
             pushResult(reply, CAT_RENDERER3, 3);
             pushResult(reply, CAT_RENDERER4, 4);
@@ -595,7 +627,13 @@ void Query::pushResult(sc::SearchReplyProxy const& reply,
     r.set_art( images_[0].toStdString() );
     //    r.set_art("http://api.map.baidu.com/images/weather/night/leizhenyu.png");
     r["subtitle"] = "Subtitle " + str;
-    r.set_title("Title " + str);
+
+    if ( i == 102 ) {
+       r.set_title("Will not go to preview!");
+    } else {
+       r.set_title("Title " + str);
+    }
+
     r["summary"] = "Summary: " + str;
     r["fulldesc"] = "fulldesc: " + str;
     r["mascot"] = icons_[0].toStdString();
@@ -658,7 +696,9 @@ void Query::pushResult(sc::SearchReplyProxy const& reply,
 
     r.set_art( images_[i].toStdString() );
     r["subtitle"] = "Subtitle " + str;
+
     r.set_title("Title " + str);
+
     r["summary"] = "Summary: " + str;
     r["fulldesc"] = "fulldesc: " + str;
     r["mascot"] = icons_[0].toStdString();

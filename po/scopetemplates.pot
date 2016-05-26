@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 10:03+0800\n"
+"POT-Creation-Date: 2016-05-26 16:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,16 +26,16 @@ msgid "This is a Scopetemplates scope"
 msgstr ""
 
 #. Translators: this means show the next page of results
-#: ../src/scope/query.cpp:700
+#: ../src/scope/query.cpp:740
 msgid "Next"
 msgstr ""
 
 #. Translators: this means show the previous page of results
-#: ../src/scope/query.cpp:714
+#: ../src/scope/query.cpp:754
 msgid "Previous"
 msgstr ""
 
 #. Translators: this means return to the top page (the first page) of results
-#: ../src/scope/query.cpp:727
+#: ../src/scope/query.cpp:767
 msgid "Top"
 msgstr ""
